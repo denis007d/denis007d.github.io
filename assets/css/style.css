@@ -2,7 +2,7 @@
 @keyframes fade-in {
     to {
         opacity: 1;
-        transform: translatey(0px);
+        transform: translateY(0px);
         /* transition: 2s; */
     }
     /* 50% {
@@ -14,6 +14,15 @@
         /* transition: 2s; */
     }
 
+}
+
+@keyframes navbar-translate {
+    to {
+        transform: translateX(0);
+    }
+    from {
+        transform: translateX(100%);
+    }
 }
 
 @keyframes mult-colors {
@@ -86,6 +95,7 @@ header .menu-header .navbar ul {
     flex-direction: row;
     align-items: center;
     gap: 2em;
+    animation: navbar-translate 2s;
 }
 
 header .menu-header .navbar ul li {
@@ -123,7 +133,7 @@ header .menu-header .navbar ul li a:nth-child(n):hover{
     padding: 0 120px;
     /* background-image: linear-gradient(to left bottom, #D93662 , #D9326F, #00c99d,#1EB450); */
     animation-name: mult-colors;
-    animation-duration: 5s;
+    animation-duration: 3s;
     /* animation-direction: alternate; */
     /* animation-delay: 2s; */
     animation-iteration-count: infinite;
@@ -181,4 +191,16 @@ main {
     /* transform: scale(1); */
     border-radius: 2em 10em;
     background-color: #D9326F;
+}
+
+footer {
+    background-color: #000;
+}
+
+footer div p{
+    color: #F3F3F3;
+    font-size: 1em;
+    font-family: 'Calibri';
+    padding: 1em 2em;
+    text-align: center;
 }
