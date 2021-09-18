@@ -1,15 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 @keyframes fade-in {
-    0% {
-        opacity: 0;
-        transform: scale(0);
-    }
-    100% {
+    to {
         opacity: 1;
-        transform: scale(1);
+        transform: translatey(0px);
+        /* transition: 2s; */
     }
+    /* 50% {
+        opacity: 0.5;
+        /* transition: 2s; }*/
+    from {
+        opacity: 0;
+        transform: translateY(-300px);
+        /* transition: 2s; */
+    }
+
 }
 
+@keyframes mult-colors {
+    0% {
+        background-image: linear-gradient(to top,#D93662 , #D9326F, #00c99d,#1EB450);
+    }
+    20% {
+        background-image: linear-gradient(to top left, #D93662 , #D9326F, #00c99d,#1EB450);
+    }
+    30%{
+        background-image: linear-gradient(to left, #D93662 , #D9326F, #00c99d,#1EB450);
+    }
+    40%{
+        background-image: linear-gradient(to left bottom, #D93662 , #D9326F, #00c99d,#1EB450);
+    }
+    60%{
+        background-image: linear-gradient(to bottom, #D93662 , #D9326F, #00c99d,#1EB450);
+    }
+    70%{
+        background-image: linear-gradient(to bottom right, #D93662 , #D9326F, #00c99d,#1EB450);
+    }
+    80%{
+        background-image: linear-gradient(to right, #D93662 , #D9326F, #00c99d,#1EB450);
+    }
+    90%{
+        background-image: linear-gradient(to right top, #D93662 , #D9326F, #00c99d,#1EB450);
+    }
+    100%{
+        background-image: linear-gradient(to top, #D93662 , #D9326F, #00c99d,#1EB450);
+    }
+}
 * {
     margin: 0;
     border: 0;
@@ -73,8 +108,8 @@ header .menu-header .navbar ul li a{
     font-weight: bold;
     font-family: 'Calibri';
     border: 1px solid;
-    border-width: 0
-
+    border-width: 0;
+    z-index: 1;
 }
 
 header .menu-header .navbar ul li a:nth-child(n):hover{
@@ -86,7 +121,12 @@ header .menu-header .navbar ul li a:nth-child(n):hover{
  /*  */
 .container {
     padding: 0 120px;
-    background-image: linear-gradient(to left bottom, #D93662 , #D9326F, #00c99d,#1EB450);
+    /* background-image: linear-gradient(to left bottom, #D93662 , #D9326F, #00c99d,#1EB450); */
+    animation-name: mult-colors;
+    animation-duration: 5s;
+    /* animation-direction: alternate; */
+    /* animation-delay: 2s; */
+    animation-iteration-count: infinite;
 }
 main {
     height: 100%;
@@ -104,7 +144,7 @@ main {
     align-items: center;
     justify-content: space-between;
     animation-name: fade-in;
-    animation-duration: 3.5s;
+    animation-duration: 2s;
 }
 
 .content-wrapper .banner-wrapper h1 {
@@ -141,15 +181,4 @@ main {
     /* transform: scale(1); */
     border-radius: 2em 10em;
     background-color: #D9326F;
-}
-
-footer {
-    padding: 0.5em 0;
-    background-color: #000;
-}
-footer p {
-    padding: 1em 0;
-    text-align: center;
-    font-family: 'Calibri';
-    color: #F3F3F3;
 }
