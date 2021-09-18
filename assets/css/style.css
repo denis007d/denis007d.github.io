@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        /* transition: 2s; */
+    }
+    /* 50% {
+        opacity: 0.5;
+        /* transition: 2s; }*/
+    100% {
+        opacity: 1;
+        /* transition: 2s; */
+    }
+
+}
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width:100%;
+    height:100%;  
+    position:relative;
+
+}
+
+header {
+    padding: 18px 0;
+    background-color: #000;
+}
+
+header .menu-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 120px;
+}
+
+header .menu-header .menu-logo svg{
+    height: 2.5em;
+}
+header .menu-header .menu-logo svg g {
+    fill: #FFF;
+}
+
+
+/* Menu - Nav */
+header .menu-header .navbar ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+}
+
+header .menu-header .navbar ul li {
+    list-style-type: none;  
+    
+}
+
+body header .menu-header .navbar ul .separator {
+    display: inline-block;
+    width: 1px;
+    height:1em;
+    color:#fff;
+    background-color: #fff;
+}
+
+header .menu-header .navbar ul li a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Calibri';
+    border: 1px solid;
+    border-width: 0
+
+}
+
+header .menu-header .navbar ul li a:nth-child(n):hover{
+    color: #D9326F;
+    border-color: currentColor;
+    border-width: 0 0 2px;
+}
+
+ /*  */
+.container {
+    padding: 0 120px;
+    background-image: linear-gradient(to left bottom, #D93662 , #D9326F, #00c99d,#1EB450);
+}
+main {
+    height: 100%;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5em;
+    text-align: center;
+
+}
+.content-wrapper article {
+    margin: 5em auto;
+    align-items: center;
+    justify-content: space-between;
+    animation-name: fade-in;
+    animation-duration: 3.5s;
+}
+
+.content-wrapper .banner-wrapper h1 {
+    font-size: 4em;
+    font-family: 'Roboto', sans-serif;
+    margin: 30px 0;
+}
+
+.content-wrapper .banner-wrapper .wrapper-spotify {
+    font-size: medium;
+    font-family: 'Calibri', Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.content-wrapper .banner-wrapper .wrapper-paragraph {
+    font-family: 'Calibri', Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+
+.content-wrapper .btn-wrapper {
+    color: #FFF;
+    background-color: #000;
+    padding: 1em 5em;
+    margin-top: 2.5em;
+    cursor: pointer;
+    border-radius: 2em;
+    transform: scale(.9, .9);
+    transition: all ease 1s;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.content-wrapper .btn-wrapper:hover {
+    /* transform: scale(1); */
+    border-radius: 2em 10em;
+    background-color: #D9326F;
+}
