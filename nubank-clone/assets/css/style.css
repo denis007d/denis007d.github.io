@@ -1,0 +1,98 @@
+@import 'https://nubank.com.br/fonts/Graphik/variants/Graphik-Regular.woff2';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #F3F3F3;
+    color: #000;
+    font-family: 'Calibri';
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+    grid-template-areas: 
+    'header header header header'
+    'main main main main'
+    ;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    grid-area: header;
+    justify-content: safe;
+    gap: 2rem;
+    background-color: #ffffff;
+    padding: 0 3rem;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+header nav ul li {
+    padding: 1.15rem 0 ;
+    list-style: none;
+}
+
+header nav ul li a {
+    padding: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    color: currentColor;
+
+}
+
+header .login {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: auto 0;
+}
+
+header .login a{
+    margin: inherit;
+    text-decoration: none;
+    color: initial;
+}
+
+header .login button{
+    background-color: #820ad1;
+    padding: 0.75rem 3rem;
+    border-radius: 6.25rem;
+}
+header .login button span {
+    color: #FFF;
+}
+
+
+/* Main */
+main {
+    grid-area: main;
+    height: calc(100vh - 3.5rem);
+    background-color: rgb(104, 53, 53);
+    background-image: url('https://nubank.com.br/_next/static/images/feaa967a7ec8170b6d2aa266376c8478-home-hero-lg@1x.jpg.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main  {
+    
+}
+
+/* Footer    */
+footer {
+    grid-area: footer;
+    background-color: rgb(207, 0, 0);
+}
+
